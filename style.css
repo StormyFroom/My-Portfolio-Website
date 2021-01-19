@@ -1,0 +1,378 @@
+*{
+    margin:0px;
+    padding:0px;
+ 
+
+}
+
+body{
+    background-color:grey;
+    color:white;
+    max-width:800px;
+    margin:0px auto;
+    font-family: sans-serif, verdana;
+    font-size: 14px;
+}
+/************START OF LOGO ***************/
+
+#logo{
+
+    width:80px;
+    height:70px;
+   border-radius: 50%;
+
+}
+#top-circle{
+    grid-area:topCircle;
+    width:80px;
+    height:70px;
+    border-radius: 50%;   
+    position:relative;
+    left:45%;
+    top:32px;
+    background-color:black;
+}
+#top-circle img{
+    border:none;
+    padding:10px 0px 0px 15px;
+}
+
+#left-of-circle{
+    grid-area:leftOfCircle;
+
+}
+#right-of-circle{
+    grid-area:rightOfCircle;
+   
+}
+/************END OF LOGO ***************/
+
+/************ MAIN CONTENT *************/
+#intro-content{
+    max-width:800px;
+    height:300px;
+    background-color:rgb(75, 74, 74) ;
+    color:white;
+
+}
+#intro-content h2{
+    padding:20px 0px 40px 20px;
+    text-decoration: underline;
+}
+#intro-content p{
+    padding:0px 20px 0px 20px;
+
+}
+#intro {
+    border-bottom: 2px solid white;
+    text-align: center;
+
+}
+#intro h2{
+    padding:30px 0px 20px 0px;
+
+}
+#resume-content{      
+    background-color:rgb(75, 74, 74) ;    
+}
+#resume-content h3{
+    padding:20px 0px 10px 20px;
+    text-decoration: underline;
+}
+#inner-wrapper{
+    padding:0px 20px 0px 20px;
+}
+#contact-content{
+    background-color:rgb(75, 74, 74) ;
+    height:300px;
+}
+#contact-content{
+    padding:20px 0px 0px 20px;
+    text-decoration: underline;
+    min-width: 450px;
+}
+#contact-inner-wrapper{
+    padding:100px 0px 0px 40%;
+
+}
+/*********** BOTTOM NAVIGATION ************/
+#spacer-left{
+    grid-area:spacer-left;
+    height:100px;
+    border-right:2px solid white;
+}
+#spacer-right{
+    grid-area:spacer-right;
+    height:100px;
+
+}
+.nav-links{
+
+    text-align: center;
+    padding:20px 0px 0px 0px;
+    height:40px;
+    width:100px;
+    font-weight:bold;
+    font-size:120%;   
+    border:1px solid white;
+}
+.nav-links a{
+    color:white;
+    text-decoration: none;
+}
+.nav-links:hover{
+    background-color: rgb(75, 74, 74);
+
+}
+#intro-link{
+    grid-area:intro;
+}
+#work-link{
+    grid-area:work;
+}
+#resume-link{
+    grid-area:resume;
+}
+#contact-link{
+    grid-area:contact;
+}
+#linkedin{
+    grid-area:linkedin;
+    
+    position: relative;
+    top:-37px;
+    left:50px;
+    
+}
+#linkedin img{
+    width:30px;
+    height:30px;
+   
+}
+#github{
+    grid-area:github;
+    position:relative;
+    top:-40px;
+} 
+#github img{
+    width:30px;
+    height:30px;
+}
+#github-work img{
+    width:30px;
+    height:30px;
+}  
+/*****************  For WORK.HTML *****/
+
+#center-body{
+    margin:0px 30px;
+}
+.work-images-text h3{
+    padding:15px 0px 15px 15px;
+   
+}
+.work-images-text p{
+    padding:0px 15px 0px 15px;
+}
+#image1{
+    padding:28px 0px 0px 50px;
+    grid-area:image1;
+}
+#image1-text{
+    grid-area:image1-text;
+}
+#image1-text a{
+    color:white;
+    
+}
+#image2{
+    padding:30px 0px 0px 120px;
+    grid-area:image2;
+}
+#image2-text{
+    grid-area:image2-text;
+}
+#image3{
+    grid-area:image3;
+    padding:28px 0px 0px 50px;
+}
+#image3-text{
+    grid-area:image3-text;
+}
+#image3-text a{
+    color:white;
+}
+#image4{
+    grid-area:image4;
+    padding:28px 0px 0px 50px;
+}
+#image4-text{
+    grid-area:image4-text;
+}
+#image4-text a{
+    color:white;
+}
+#image5{
+    grid-area:image5;
+}
+#image5-text{
+    grid-area:image5-text;
+}
+#footer a{
+    text-decoration: none;
+    color:white;
+}
+/*****************  For Responsive Layout *****/
+
+@media only screen and (max-width:450px){
+
+    #intro-content{
+        min-width:450px;
+    }
+    #linkedin{
+        top:10px;
+        left:80px;
+    }
+    #github{
+        top:10px;
+        left:10px;
+    }
+    #top-circle-wrapper{
+
+        display:grid;
+        border-bottom: 2px solid white;
+        grid-template-rows: 50px 50px;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "topCircle topCircle "
+        "leftOfCircle rightOfCircle";
+    
+    }
+    /************** FOR BOTTOM NAVIGATION *************/
+    #nav-wrapper{
+        display:grid;
+        grid-template-rows:50px 50px 50px 50px 50px;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-areas: ". intro." ". work ." ". resume ." ". contact ." ". linkedin github";
+    
+    }
+    #nav-wrapper2{
+        display:grid;
+        background-color:grey;
+        grid-template-rows:35px 35px 35px 35px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:        
+        ". intro." ". work ." ". resume ." ". contact .";
+    
+    }
+    .nav-links2{
+        border:2px solid white;
+    }
+    .nav-links2 a{
+        color:white;
+        
+    }
+    .nav-links2:hover{
+        background-color:rgb(75, 74, 74);
+    }
+    .nav-links2 a:hover{
+        
+        color:white;
+        text-decoration: none;
+    }
+    /******* FOR WORK.HTML *********/
+    #work-wrapper{
+        background-color:rgb(75, 74, 74);
+        display:grid;
+        min-width:570px;
+        grid-template-columns: 1fr;
+        grid-template-rows:auto;
+    
+        grid-template-areas: 
+        "image1" "image1-text"
+        "image2" "image2-text"
+        "image3" "image3-text"
+        "image4" "image4-text"
+        "image5" "image5-text";
+    
+    }
+}
+@media (min-width:450px){
+
+    #top-circle-wrapper{
+        display:grid;
+        border-bottom: 2px solid white;
+        grid-template-rows: 50px 50px;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "topCircle topCircle "
+        "leftOfCircle rightOfCircle";
+    
+    }
+
+ /************** FOR BOTTOM NAVIGATION *************/
+    #nav-wrapper{
+        display:grid;
+        grid-template-rows:50px 100px 50px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        ". . . spacer-left spacer-right . . ."
+        ". . intro work resume contact . ."
+        ". . . . . linkedin github .";
+    
+    }
+ /******* FOR IMAGES.HTML *********/
+    #nav-wrapper2{
+        display:grid;
+        max-width:900px;
+        background-color:grey;
+        grid-template-rows:100px 100px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        ". . . spacer-left spacer-right . . ."
+        ". . intro work resume contact . .";
+    
+    }
+    .nav-links2{
+
+        text-align: center;
+        padding:0px 0px 0px 0px;
+        height:35px;
+        width:100px;
+        font-weight:bold;
+        font-size:120%;   
+        border:1px solid white;
+    }
+    .nav-links2 a{
+        color:white;
+        
+    }
+    .nav-links2:hover{
+        background-color:rgb(75, 74, 74);
+    }
+    .nav-links2 a:hover{
+        
+        color:white;
+        text-decoration: none;
+    }
+    
+    /******* FOR WORK.HTML *********/
+    
+    #work-wrapper{
+        background-color:rgb(75, 74, 74);
+        width:800px;
+        row-gap:20px;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:200px 200px 200px 200px 200px;
+    
+        grid-template-areas: 
+        "image1 image1-text"
+        "image2 image2-text"
+        "image3 image3-text"
+        "image4 image4-text"
+        "image5 image5-text";
+    
+    }
+
+}
